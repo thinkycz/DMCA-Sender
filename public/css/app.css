@@ -1,0 +1,18 @@
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2em; }
+
+.page-heading {
+  margin: 2em;
+  text-align: center;
+  line-height: 1; }
+  .page-heading:after {
+    content: '';
+    background: #b92c28;
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 40px auto 0; }
+
+/*# sourceMappingURL=app.css.map */

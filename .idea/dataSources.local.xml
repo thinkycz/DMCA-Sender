@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="DMCA" uuid="a9cb8a91-6843-466d-acc5-3643f6a594de">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+  </component>
+</project>
