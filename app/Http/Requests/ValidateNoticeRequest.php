@@ -24,7 +24,7 @@ class ValidateNoticeRequest extends Request
     public function rules()
     {
         return [
-            'content_provider' => 'required',
+            'provider_id' => 'required',
             'infringing_title' => 'required',
             'infringing_link' => 'required|url',
             'original_link' => 'required|url',

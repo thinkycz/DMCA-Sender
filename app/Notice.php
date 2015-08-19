@@ -20,6 +20,7 @@ class Notice extends \Eloquent
             'additional_info',
             'user_id',
             'provider_id',
+            'template',
         ];
 
     /**

@@ -13,6 +13,6 @@ class Provider extends \Eloquent
      */
     public function notices()
     {
-        return $this->hasMany('App\Notices');
+        return $this->hasMany('App\Notice');
     }
 }

@@ -37,6 +37,6 @@ class User extends \Eloquent implements AuthenticatableContract, CanResetPasswor
      */
     public function notices()
     {
-        return $this->hasMany('App\Notices');
+        return $this->hasMany('App\Notice');
     }
 }

@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ValidateNoticeRequest;
 use App\Notice;
 use App\Provider;
-use App\User;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +25,9 @@ class NoticesController extends Controller
      */
     public function index()
     {
-        return \Response::view('notices.index');
+        $notices = Notice::all();
+
+        return \Response::view('notices.index', compact('notices'));
     }
 
     /**
@@ -56,6 +56,7 @@ class NoticesController extends Controller
             ];
         $template = view()->file(app_path('Http/Templates/dmca.blade.php'), $data);
 
+        \Session::flash('data', $data);
 
         return Response::view('notices.confirm', compact('template'));
     }
@@ -68,7 +69,13 @@ class NoticesController extends Controller
      */
     public function store(Request $request)
     {
-        $notice = new Notice();
+        $data = \Session::get('data') + [
+                'template' => $request->get('template')
+            ];
+
+        $notice = new Notice($data);
+
+        \Auth::user()->notices()->save($notice);
 
         return Response::redirectToAction('NoticesController@index');
     }

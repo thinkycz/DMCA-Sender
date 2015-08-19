@@ -7,8 +7,8 @@
     {!! Form::open(['method' => 'GET', 'action' => 'NoticesController@confirm']) !!}
 
     <div class="form-group">
-        {!! Form::label('content_provider', 'Please select the content provider.') !!}
-        {!! Form::select('content_provider', $providers, null,['class' => 'form-control']) !!}
+        {!! Form::label('provider_id', 'Please select the content provider.') !!}
+        {!! Form::select('provider_id', $providers, null,['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">

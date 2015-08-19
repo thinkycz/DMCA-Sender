@@ -15,6 +15,10 @@
     height: 3px;
     margin: 40px auto 0; }
 
+.jumbotron {
+  border-radius: 6px;
+  padding: 3em; }
+
 /*# sourceMappingURL=app.css.map */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
